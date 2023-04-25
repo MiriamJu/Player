@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Tests/Player.Test/obj
+/Services/Player/Services.ProductAPI/bin/Debug/net6.0
+/Services/Player/Services.ProductAPI/obj/Debug/net6.0
+/Services/Player/Services.ProductAPI/obj
+/Tests/Player.Test/bin/Debug/net6.0
+/.vs/PlayerServiceExercise
