@@ -1,6 +1,6 @@
-﻿using Services.ProductAPI.Models.Dto;
-using Services.ProductAPI.Models.Dtos;
-using Services.ProductAPI.Repository;
+﻿using Services.PlayerAPI.Models.Dto;
+using Services.PlayerAPI.Models.Dtos;
+using Services.PlayerAPI.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Services.ProductAPI.Controllers
+namespace Services.PlayerAPI.Controllers
 {
     [Route("api/players")]
     public class PlayerAPIController : ControllerBase

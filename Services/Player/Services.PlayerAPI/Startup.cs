@@ -1,6 +1,6 @@
 using AutoMapper;
-using Services.ProductAPI.DbContexts;
-using Services.ProductAPI.Repository;
+using Services.PlayerAPI.DbContexts;
+using Services.PlayerAPI.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using Npgsql;
 
 
-namespace Services.ProductAPI
+namespace Services.PlayerAPI
 {
     public class Startup
     {
@@ -56,13 +56,13 @@ namespace Services.ProductAPI
                 options.AddPolicy("ApiScope", policy =>
                 {
                     policy.RequireAuthenticatedUser();
-                    policy.RequireClaim("scope", "mango");
+                    policy.RequireClaim("scope", "player");
                 });
             });
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Services.ProductAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Services.PlayerAPI", Version = "v1" });
                 c.EnableAnnotations();
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
@@ -102,7 +102,7 @@ namespace Services.ProductAPI
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Services.ProductAPI v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Services.PlayerAPI v1"));
             }
 
             app.UseHttpsRedirection();

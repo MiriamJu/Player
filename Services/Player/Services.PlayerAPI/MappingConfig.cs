@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using Services.ProductAPI.Models;
-using Services.ProductAPI.Models.Dtos;
+using Services.PlayerAPI.Models;
+using Services.PlayerAPI.Models.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Services.ProductAPI
+namespace Services.PlayerAPI
 {
     public class MappingConfig
     {

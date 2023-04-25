@@ -1,4 +1,4 @@
-﻿namespace Services.ProductAPI.Models.Enums
+﻿namespace Services.PlayerAPI.Models.Enums
 {
     public enum LifeStatus
     {

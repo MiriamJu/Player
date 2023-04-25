@@ -1,10 +1,10 @@
-﻿using Services.ProductAPI.Models.Dtos;
+﻿using Services.PlayerAPI.Models.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Services.ProductAPI.Repository
+namespace Services.PlayerAPI.Repository
 {
     public interface IPlayerRepository
     {

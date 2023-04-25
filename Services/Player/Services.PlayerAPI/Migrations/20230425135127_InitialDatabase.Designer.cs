@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using Services.ProductAPI.DbContexts;
+using Services.PlayerAPI.DbContexts;
 
 #nullable disable
 
-namespace Services.ProductAPI.Migrations
+namespace Services.PlayerAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20230425135127_InitialDatabase")]
@@ -25,7 +25,7 @@ namespace Services.ProductAPI.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Services.ProductAPI.Models.Player", b =>
+            modelBuilder.Entity("Services.PlayerAPI.Models.Player", b =>
                 {
                     b.Property<string>("PlayerId")
                         .HasColumnType("text");

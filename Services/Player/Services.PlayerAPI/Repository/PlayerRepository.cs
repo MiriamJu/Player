@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
-using Services.ProductAPI.DbContexts;
-using Services.ProductAPI.Models;
-using Services.ProductAPI.Models.Dtos;
+using Services.PlayerAPI.DbContexts;
+using Services.PlayerAPI.Models;
+using Services.PlayerAPI.Models.Dtos;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Services.ProductAPI.Repository
+namespace Services.PlayerAPI.Repository
 {
     public class PlayerRepository : IPlayerRepository
     {

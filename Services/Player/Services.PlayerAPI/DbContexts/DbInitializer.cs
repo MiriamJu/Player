@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Services.ProductAPI.DbContexts
+namespace Services.PlayerAPI.DbContexts
 {
     public class DbInitializer
     {

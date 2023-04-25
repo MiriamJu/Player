@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using Services.ProductAPI.DbContexts;
+using Services.PlayerAPI.DbContexts;
 
 #nullable disable
 
-namespace Services.ProductAPI.Migrations
+namespace Services.PlayerAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -22,7 +22,7 @@ namespace Services.ProductAPI.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Services.ProductAPI.Models.LifeStatusAdditionalData", b =>
+            modelBuilder.Entity("Services.PlayerAPI.Models.LifeStatusAdditionalData", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -54,7 +54,7 @@ namespace Services.ProductAPI.Migrations
                     b.ToTable("LifeStatusAdditionalData");
                 });
 
-            modelBuilder.Entity("Services.ProductAPI.Models.Player", b =>
+            modelBuilder.Entity("Services.PlayerAPI.Models.Player", b =>
                 {
                     b.Property<string>("PlayerId")
                         .HasColumnType("text");
@@ -104,13 +104,13 @@ namespace Services.ProductAPI.Migrations
                     b.ToTable("player");
                 });
 
-            modelBuilder.Entity("Services.ProductAPI.Models.Player", b =>
+            modelBuilder.Entity("Services.PlayerAPI.Models.Player", b =>
                 {
-                    b.HasOne("Services.ProductAPI.Models.LifeStatusAdditionalData", "BirthStatusAdditionalData")
+                    b.HasOne("Services.PlayerAPI.Models.LifeStatusAdditionalData", "BirthStatusAdditionalData")
                         .WithMany()
                         .HasForeignKey("BirthStatusAdditionalDataId");
 
-                    b.HasOne("Services.ProductAPI.Models.LifeStatusAdditionalData", "DeathStatusAdditionalData")
+                    b.HasOne("Services.PlayerAPI.Models.LifeStatusAdditionalData", "DeathStatusAdditionalData")
                         .WithMany()
                         .HasForeignKey("DeathStatusAdditionalDataId");
 

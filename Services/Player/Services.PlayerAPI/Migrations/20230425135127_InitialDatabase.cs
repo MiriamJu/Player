@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Services.ProductAPI.Migrations
+namespace Services.PlayerAPI.Migrations
 {
     /// <inheritdoc />
     public partial class InitialDatabase : Migration

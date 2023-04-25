@@ -1,7 +1,7 @@
-﻿using Services.ProductAPI.Models;
+﻿using Services.PlayerAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Services.ProductAPI.DbContexts
+namespace Services.PlayerAPI.DbContexts
 {
     public class ApplicationDbContext : DbContext
     {

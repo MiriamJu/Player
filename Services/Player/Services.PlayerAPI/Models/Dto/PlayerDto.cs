@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Services.ProductAPI.Models.Dtos
+namespace Services.PlayerAPI.Models.Dtos
 {
     public class PlayerDto
     {

@@ -3,8 +3,9 @@
 ################################################################################
 
 /Tests/Player.Test/obj
-/Services/Player/Services.ProductAPI/bin/Debug/net6.0
-/Services/Player/Services.ProductAPI/obj/Debug/net6.0
-/Services/Player/Services.ProductAPI/obj
-/Tests/Player.Test/bin/Debug/net6.0
+/Services/Player/Services.ProductAPI/bin/*
+/Services/Player/Services.ProductAPI/obj/*
+/Tests/Player.Test/bin/Debug/*
 /.vs/PlayerServiceExercise
+
+/Services/Player/Services.PlayerAPI/bin/Debug/net6.0

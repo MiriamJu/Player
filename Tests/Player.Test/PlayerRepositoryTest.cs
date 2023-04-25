@@ -1,6 +1,6 @@
 using AutoMapper;
-using Services.ProductAPI.DbContexts;
-using Services.ProductAPI.Repository;
+using Services.PlayerAPI.DbContexts;
+using Services.PlayerAPI.Repository;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 

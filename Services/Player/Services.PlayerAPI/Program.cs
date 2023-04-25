@@ -1,4 +1,4 @@
-using Services.ProductAPI.DbContexts;
+using Services.PlayerAPI.DbContexts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Services.ProductAPI
+namespace Services.PlayerAPI
 {
     public class Program
     {

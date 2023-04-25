@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection.PortableExecutable;
 using System.Threading.Tasks;
-using Services.ProductAPI.Models.Enums;
+using Services.PlayerAPI.Models.Enums;
 
-namespace Services.ProductAPI.Models
+namespace Services.PlayerAPI.Models
 {
     public class LifeStatusAdditionalData
     {
