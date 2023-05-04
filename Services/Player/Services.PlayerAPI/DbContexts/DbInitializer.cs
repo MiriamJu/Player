@@ -34,7 +34,7 @@ namespace Services.PlayerAPI.DbContexts
             using (var reader = new StreamReader(filePath))
             {
                 var line = reader.ReadLine();
-                //playerCsv.AppendLine("PlayerId,NameFirst ,NameLast ,NameGiven,Weight,Bats,Throws,DebutFinalGame,RetroId,DdRefId");
+ 
                 while (!reader.EndOfStream)
                 {
                     line = reader.ReadLine();
@@ -79,7 +79,7 @@ namespace Services.PlayerAPI.DbContexts
 
 
                 }
-                //after your loop
+
                 using (ApplicationDbContext context = db)
                 {
                     db.Players.AddRange(players);
