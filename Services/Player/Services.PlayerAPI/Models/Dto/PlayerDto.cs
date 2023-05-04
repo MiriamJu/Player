@@ -26,7 +26,7 @@ namespace Services.PlayerAPI.Models.Dtos
         public string NameLast { get; set; }
         public string NameGiven { get; set; }
         public int Weight { get; set; }
-        public int Bats { get; set; }
+        public string Bats { get; set; }
         public int Throws { get; set; }
         public DateTime Debut { get; set; }
         public DateTime FinalGame { get; set; }

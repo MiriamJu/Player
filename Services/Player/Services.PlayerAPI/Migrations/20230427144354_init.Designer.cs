@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Services.PlayerAPI.DbContexts;
@@ -11,9 +12,11 @@ using Services.PlayerAPI.DbContexts;
 namespace Services.PlayerAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230427144354_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,7 +65,7 @@ namespace Services.PlayerAPI.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("bbf77428-bf59-48e8-8120-6a89ad4c4c58"),
+                            Id = new Guid("4df64da7-c2cd-4192-b15e-44d27bbfbd41"),
                             City = "a",
                             Country = "b",
                             Day = 1,
@@ -114,7 +117,7 @@ namespace Services.PlayerAPI.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a00cee4d-ca89-4463-8d3f-e21fdbbdfeb3"),
+                            Id = new Guid("2c61bb88-d982-4860-94de-46d8b5c09228"),
                             City = "a",
                             Country = "b",
                             Day = 1,
@@ -131,20 +134,17 @@ namespace Services.PlayerAPI.Migrations
                     b.Property<string>("PlayerId")
                         .HasColumnType("text");
 
-                    b.Property<string>("Bats")
-                        .HasColumnType("text");
+                    b.Property<int>("Bats")
+                        .HasColumnType("integer");
 
                     b.Property<string>("DdRefId")
                         .HasColumnType("text");
 
-                    b.Property<DateTime?>("Debut")
+                    b.Property<DateTime>("Debut")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime?>("FinalGame")
+                    b.Property<DateTime>("FinalGame")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<int?>("Height")
-                        .HasColumnType("integer");
 
                     b.Property<string>("NameFirst")
                         .HasColumnType("text");
@@ -158,10 +158,10 @@ namespace Services.PlayerAPI.Migrations
                     b.Property<string>("RetroId")
                         .HasColumnType("text");
 
-                    b.Property<int?>("Throws")
+                    b.Property<int>("Throws")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("Weight")
+                    b.Property<int>("Weight")
                         .HasColumnType("integer");
 
                     b.HasKey("PlayerId");
@@ -172,7 +172,7 @@ namespace Services.PlayerAPI.Migrations
                         new
                         {
                             PlayerId = "aa",
-                            Bats = "R",
+                            Bats = 1,
                             DdRefId = "123",
                             Debut = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FinalGame = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),

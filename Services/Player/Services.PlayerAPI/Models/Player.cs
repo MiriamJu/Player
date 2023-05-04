@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Services.PlayerAPI.Models
 {
@@ -9,19 +10,18 @@ namespace Services.PlayerAPI.Models
     {
         [Key]
         public string PlayerId { get; set; }
-        public LifeStatusAdditionalData BirthStatusAdditionalData { get; set; }
-        public LifeStatusAdditionalData DeathStatusAdditionalData { get; set; }
-        public string NameFirst { get; set; }
-        public string NameLast { get; set; }
-        public string NameGiven { get; set; }
-        public int Weight { get; set; }
-        public int Bats { get; set; }
-        public int Throws { get; set; }
-        public DateTime Debut { get; set; }
-        public DateTime FinalGame { get; set; }
-        [ForeignKey("OrderHeaderId")]
-        public string RetroId { get; set; }
-        [ForeignKey("OrderHeaderId")]
-        public string DdRefId { get; set; }
+        public BirthStatusAdditionalData BirthStatusAdditionalData { get; set; } = null;
+        public DeathStatusAdditionalData DeathStatusAdditionalData { get; set; } = null;
+        public string NameFirst { get; set; } = null;
+        public string NameLast { get; set; } = null;
+        public string NameGiven { get; set; } = null;
+        public Nullable<int> Weight { get; set; }
+        public Nullable<int> Height { get; set; }
+        public string Bats { get; set; } = null;
+        public Nullable<int> Throws { get; set; }
+        public Nullable<DateTime> Debut { get; set; }
+        public Nullable<DateTime> FinalGame { get; set; }
+        public string RetroId { get; set; } = null;
+        public string DdRefId { get; set; } = null;
     }
 }

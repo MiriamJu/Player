@@ -23,15 +23,21 @@ namespace Services.PlayerAPI.Repository
 
         public async Task<PlayerDto> GetPlayerById(string playerId)
         {
-            Player product = await _db.Players.Where(x=>string.Equals(x.PlayerId, playerId)).FirstOrDefaultAsync(); ;
-            return _mapper.Map<PlayerDto>(product);
+            using (ApplicationDbContext context = _db)
+            {
+                Player product = await _db.Players.Where(x => string.Equals(x.PlayerId, playerId)).FirstOrDefaultAsync(); ;
+                return _mapper.Map<PlayerDto>(product);
+            }
+          
         }
 
         public async Task<IEnumerable<PlayerDto>> GetPlayers()
         {
-            List<Player> productList = await _db.Players.ToListAsync();
-            return _mapper.Map<List<PlayerDto>>(productList);
-
+            using (ApplicationDbContext context = _db)
+            {
+                List<Player> productList = await _db.Players.Include(b => b.BirthStatusAdditionalData).Include(d => d.DeathStatusAdditionalData).Take(20).ToListAsync();
+                return _mapper.Map<List<PlayerDto>>(productList);
+            }
         }
     }
 }
